@@ -1,14 +1,14 @@
 import axios from "axios";
 import * as actionTypes from "./types";
 
-export const getCoffeeShops = () => {
+export const getClassRoom = () => {
   return async dispatch => {
     dispatch(setCoffeeShopsLoading());
     try {
-      const res = await axios.get("http://coffee.q8fawazo.me/api/?format=json");
+      const res = await axios.get("http://127.0.0.1:8000/api/classrooms/list/");
       const coffeeShops = res.data;
       dispatch({
-        type: actionTypes.GET_COFFEESHOPS,
+        type: actionTypes.GET_CLASSROOM,
         payload: coffeeShops
       });
     } catch (err) {

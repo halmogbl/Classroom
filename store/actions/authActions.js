@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import { AsyncStorage } from "react-native";
 
 const instance = axios.create({
-  baseURL: "http://coffee.q8fawazo.me/api/"
+  baseURL: "http://127.0.0.1:8000/api/"
 });
 
 export const checkForExpiredToken = navigation => {
@@ -51,7 +51,7 @@ const setCurrentUser = user => ({
 export const login = (userData, navigation) => {
   return async dispatch => {
     try {
-      let response = await instance.post("login/", userData);
+      let response = await instance.post("user/login/", userData);
       let user = response.data;
       let decodedUser = jwt_decode(user.token);
       setAuthToken(user.token);
@@ -66,7 +66,7 @@ export const login = (userData, navigation) => {
 export const signup = (userData, navigation) => {
   return async dispatch => {
     try {
-      await instance.post("register/", userData);
+      await instance.post("user/register/", userData);
       dispatch(login(userData, navigation));
     } catch (error) {
       console.error(error);

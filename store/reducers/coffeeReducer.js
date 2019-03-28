@@ -7,7 +7,7 @@ const initialState = {
 
 const coffeeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.GET_COFFEESHOPS:
+    case actionTypes.GET_CLASSROOM:
       return {
         ...state,
         coffeeShops: action.payload,

@@ -15,12 +15,12 @@ import CoffeeDetail from "../CoffeeDetail";
 import Login from "../Login";
 
 // Actions
-import { getCoffeeShops } from "../../store/actions/coffeeActions";
+import { getClassRoom } from "../../store/actions/coffeeActions";
 import AppContainer from "../../Navigation";
 
 class HomePage extends Component {
   componentDidMount() {
-    this.props.getCoffeeShops();
+    this.props.getClassRoom();
   }
   render() {
     return (
@@ -32,7 +32,7 @@ class HomePage extends Component {
   }
 }
 const mapDispatchToProps = dispatch => ({
-  getCoffeeShops: () => dispatch(getCoffeeShops())
+  getClassRoom: () => dispatch(getClassRoom())
 });
 
 export default connect(

@@ -11,10 +11,11 @@ class CoffeeItem extends Component {
   render() {
     const { coffeeShop } = this.props;
     return (
-      <ImageBackground
-        source={{ uri: coffeeShop.background }}
-        style={styles.background}
-      >
+      // <ImageBackground
+      //   source={{ uri: coffeeShop.background }}
+      //   style={styles.background}
+      // >
+      <View>
         <View style={styles.overlay} />
         <ListItem
           button
@@ -28,20 +29,21 @@ class CoffeeItem extends Component {
           <Card style={styles.transparent}>
             <CardItem style={styles.transparent}>
               <Left>
-                <Thumbnail
+                {/* <Thumbnail
                   bordered
                   source={{ uri: coffeeShop.img }}
                   style={styles.thumbnail}
-                />
-                <Text style={styles.text}>{coffeeShop.name}</Text>
+                /> */}
+                <Text style={styles.text}>{coffeeShop.subject}</Text>
                 <Text note style={styles.text}>
-                  {coffeeShop.distance}
+                  {coffeeShop.grade}
                 </Text>
               </Left>
             </CardItem>
           </Card>
         </ListItem>
-      </ImageBackground>
+        {/* // </ImageBackground> */}
+      </View>
     );
   }
 }

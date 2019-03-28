@@ -1,4 +1,4 @@
-export const GET_COFFEESHOPS = "GET_COFFEESHOPS";
+export const GET_CLASSROOM = "GET_CLASSROOM";
 export const COFFEESHOPS_LOADING = "COFFEESHOPS_LOADING";
 
 export const ADD_ITEM = "ADD_ITEM";

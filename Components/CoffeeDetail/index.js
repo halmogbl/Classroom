@@ -65,13 +65,13 @@ class CoffeeDetail extends Component {
           <ListItem style={styles.top}>
             <Left>
               <Text style={styles.text}>
-                {coffeeshop.name + "\n"}
-                <Text note>{coffeeshop.location}</Text>
+                {coffeeshop.subject + "\n"}
+                <Text note>{coffeeshop.year}</Text>
               </Text>
             </Left>
             <Body />
             <Right>
-              <Thumbnail bordered source={{ uri: coffeeshop.img }} />
+              {/* <Thumbnail bordered source={{ uri: coffeeshop.img }} /> */}
             </Right>
           </ListItem>
           <ListItem style={{ borderBottomWidth: 0 }}>

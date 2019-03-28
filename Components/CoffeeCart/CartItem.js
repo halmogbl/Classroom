@@ -12,13 +12,16 @@ class CartItem extends Component {
     return (
       <ListItem style={{ borderBottomWidth: 0 }}>
         <Left>
-          <Text style={{ color: "white", marginLeft: 16 }}> {item.drink} </Text>
+          <Text style={{ color: "white", marginLeft: 16 }}>
+            {" "}
+            {item.subject}{" "}
+          </Text>
           <Text note style={{ marginLeft: 16 }}>
-            {item.option}
+            {item.grade}
           </Text>
         </Left>
         <Body>
-          <Text style={{ color: "white" }}>{item.quantity}</Text>
+          <Text style={{ color: "white" }}>{item.year}</Text>
         </Body>
         <Right>
           <Button transparent onPress={this.handlePress}>
